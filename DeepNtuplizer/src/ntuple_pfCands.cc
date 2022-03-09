@@ -537,8 +537,8 @@ bool ntuple_pfCands::fillBranches(const pat::Jet & jet, const size_t& jetidx, co
              // loop over the hits of the track.
              //const static unsigned short LayerOffset = 3;
              //const static unsigned short LayerMask = 0xF;
-             for(int i = 0; i < p.numberOfAllHits(reco::HitPattern::TRACK_HITS); i++){
-              uint32_t hit = p.getHitPattern(reco::HitPattern::TRACK_HITS, i);
+             for(int nh = 0; nh < p.numberOfAllHits(reco::HitPattern::TRACK_HITS); nh++){
+              uint32_t hit = p.getHitPattern(reco::HitPattern::TRACK_HITS, nh);
               if(p.validHitFilter(hit)){// if the hit is valid
                //Pixel Barrel // it is in pixel barrel
                if(p.pixelBarrelHitFilter(hit)){
