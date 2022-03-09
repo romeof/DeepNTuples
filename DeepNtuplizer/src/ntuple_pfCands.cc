@@ -605,39 +605,39 @@ bool ntuple_pfCands::fillBranches(const pat::Jet & jet, const size_t& jetidx, co
               //std::cout << std::endl;
              }
              //Pixel Barrel 
-             Cpfcan_nhitpixelBarrelLayer1_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer1,-1,0,100,0);
-             Cpfcan_nhitpixelBarrelLayer2_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer2,-1,0,100,0);
-             Cpfcan_nhitpixelBarrelLayer3_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer3,-1,0,100,0);
-             Cpfcan_nhitpixelBarrelLayer4_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer4,-1,0,100,0);
+             Cpfcan_nhitpixelBarrelLayer1_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidPixelBarrelHits()) ? catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer1,-1,0,100,0) : -1;
+             Cpfcan_nhitpixelBarrelLayer2_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidPixelBarrelHits()) ? catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer2,-1,0,100,0) : -1;
+             Cpfcan_nhitpixelBarrelLayer3_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidPixelBarrelHits()) ? catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer3,-1,0,100,0) : -1;
+             Cpfcan_nhitpixelBarrelLayer4_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidPixelBarrelHits()) ? catchInfsAndBound(Cpfcan_nhitpixelBarrelLayer4,-1,0,100,0) : -1;
              //Pixel Endcap 
-             Cpfcan_nhitpixelEndcapLayer1_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitpixelEndcapLayer1,-1,0,100,0);
-             Cpfcan_nhitpixelEndcapLayer2_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitpixelEndcapLayer2,-1,0,100,0);
+             Cpfcan_nhitpixelEndcapLayer1_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidPixelEndcapHits()) ? catchInfsAndBound(Cpfcan_nhitpixelEndcapLayer1,-1,0,100,0) : -1;
+             Cpfcan_nhitpixelEndcapLayer2_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidPixelEndcapHits()) ? catchInfsAndBound(Cpfcan_nhitpixelEndcapLayer2,-1,0,100,0) : -1;
              //Strip TIB
-             Cpfcan_nhitstripTIBLayer1_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTIBLayer1,-1,0,100,0);
-             Cpfcan_nhitstripTIBLayer2_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTIBLayer2,-1,0,100,0);
-             Cpfcan_nhitstripTIBLayer3_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTIBLayer3,-1,0,100,0);
-             Cpfcan_nhitstripTIBLayer4_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTIBLayer4,-1,0,100,0);
+             Cpfcan_nhitstripTIBLayer1_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTIBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTIBLayer1,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTIBLayer2_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTIBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTIBLayer2,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTIBLayer3_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTIBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTIBLayer3,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTIBLayer4_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTIBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTIBLayer4,-1,0,100,0) : -1;
              //Strip TID
-             Cpfcan_nhitstripTIDLayer1_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTIDLayer1,-1,0,100,0);
-             Cpfcan_nhitstripTIDLayer2_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTIDLayer2,-1,0,100,0);
-             Cpfcan_nhitstripTIDLayer3_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTIDLayer3,-1,0,100,0);
+             Cpfcan_nhitstripTIDLayer1_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTIDHits()) ? catchInfsAndBound(Cpfcan_nhitstripTIDLayer1,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTIDLayer2_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTIDHits()) ? catchInfsAndBound(Cpfcan_nhitstripTIDLayer2,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTIDLayer3_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTIDHits()) ? catchInfsAndBound(Cpfcan_nhitstripTIDLayer3,-1,0,100,0) : -1;
              //Strip TOB
-             Cpfcan_nhitstripTOBLayer1_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTOBLayer1,-1,0,100,0);
-             Cpfcan_nhitstripTOBLayer2_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTOBLayer2,-1,0,100,0);
-             Cpfcan_nhitstripTOBLayer3_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTOBLayer3,-1,0,100,0);
-             Cpfcan_nhitstripTOBLayer4_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTOBLayer4,-1,0,100,0);
-             Cpfcan_nhitstripTOBLayer5_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTOBLayer5,-1,0,100,0);
-             Cpfcan_nhitstripTOBLayer6_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTOBLayer6,-1,0,100,0);
+             Cpfcan_nhitstripTOBLayer1_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTOBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTOBLayer1,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTOBLayer2_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTOBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTOBLayer2,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTOBLayer3_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTOBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTOBLayer3,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTOBLayer4_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTOBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTOBLayer4,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTOBLayer5_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTOBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTOBLayer5,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTOBLayer6_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTOBHits()) ? catchInfsAndBound(Cpfcan_nhitstripTOBLayer6,-1,0,100,0) : -1;
              //Strip TEC
-             Cpfcan_nhitstripTECLayer1_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer1,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer2_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer2,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer3_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer3,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer4_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer4,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer5_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer5,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer6_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer6,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer7_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer7,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer8_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer8,-1,0,100,0);
-             Cpfcan_nhitstripTECLayer9_[fillntupleentry] = catchInfsAndBound(Cpfcan_nhitstripTECLayer9,-1,0,100,0);
+             Cpfcan_nhitstripTECLayer1_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer1,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer2_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer2,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer3_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer3,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer4_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer4,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer5_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer5,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer6_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer6,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer7_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer7,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer8_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer8,-1,0,100,0) : -1;
+             Cpfcan_nhitstripTECLayer9_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidStripTECHits()) ? catchInfsAndBound(Cpfcan_nhitstripTECLayer9,-1,0,100,0) : -1;
              //Tracker all layers together   
              //Valid hits
              Cpfcan_numberOfValidHits_[fillntupleentry] = (track_ptr->hitPattern().numberOfValidHits()) ? catchInfsAndBound(track_ptr->hitPattern().numberOfValidHits(),-1,0,100,0) : -1;
