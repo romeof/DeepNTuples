@@ -107,11 +107,79 @@ private:
     // track quality
     float Cpfcan_lostInnerHits_[max_pfcand_];
     float Cpfcan_numberOfPixelHits_[max_pfcand_];
-
     float Cpfcan_chi2_[max_pfcand_];
     float Cpfcan_quality_[max_pfcand_];
-
     float Cpfcan_drminsv_[max_pfcand_];
+    //hit pattern variables, as defined here https://github.com/cms-sw/cmssw/blob/master/DataFormats/TrackReco/interface/HitPattern.h
+    //Tracker per layer 
+    //Pixel barrel 
+    float Cpfcan_nhitpixelBarrelLayer1_[max_pfcand_]; 
+    float Cpfcan_nhitpixelBarrelLayer2_[max_pfcand_];
+    float Cpfcan_nhitpixelBarrelLayer3_[max_pfcand_];
+    float Cpfcan_nhitpixelBarrelLayer4_[max_pfcand_];
+    //Pixel Endcap 
+    float Cpfcan_nhitpixelEndcapLayer1_[max_pfcand_];
+    float Cpfcan_nhitpixelEndcapLayer2_[max_pfcand_];
+    //Strip TIB
+    float Cpfcan_nhitstripTIBLayer1_[max_pfcand_];
+    float Cpfcan_nhitstripTIBLayer2_[max_pfcand_];
+    float Cpfcan_nhitstripTIBLayer3_[max_pfcand_];
+    float Cpfcan_nhitstripTIBLayer4_[max_pfcand_];
+    //Strip TID
+    float Cpfcan_nhitstripTIDLayer1_[max_pfcand_];
+    float Cpfcan_nhitstripTIDLayer2_[max_pfcand_];
+    float Cpfcan_nhitstripTIDLayer3_[max_pfcand_];
+    //Strip TOB
+    float Cpfcan_nhitstripTOBLayer1_[max_pfcand_];
+    float Cpfcan_nhitstripTOBLayer2_[max_pfcand_];
+    float Cpfcan_nhitstripTOBLayer3_[max_pfcand_];
+    float Cpfcan_nhitstripTOBLayer4_[max_pfcand_];
+    float Cpfcan_nhitstripTOBLayer5_[max_pfcand_];
+    float Cpfcan_nhitstripTOBLayer6_[max_pfcand_];
+    //Strip TEC
+    float Cpfcan_nhitstripTECLayer1_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer2_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer3_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer4_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer5_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer6_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer7_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer8_[max_pfcand_];
+    float Cpfcan_nhitstripTECLayer9_[max_pfcand_];
+    //Tracker all layers together  
+    //Valid hits
+    float Cpfcan_numberOfValidHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidTrackerHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidPixelHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidPixelBarrelHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidPixelEndcapHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidStripHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidStripTIBHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidStripTIDHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidStripTOBHits_[max_pfcand_]; 
+    float Cpfcan_numberOfValidStripTECHits_[max_pfcand_]; 
+    //LayersWithMeasurement
+    float Cpfcan_trackerLayersWithMeasurementOld_[max_pfcand_]; 
+    float Cpfcan_trackerLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_pixelLayersWithMeasurementOld_[max_pfcand_]; 
+    float Cpfcan_pixelLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_stripLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_pixelBarrelLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_pixelEndcapLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_stripTIBLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_stripTIDLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_stripTOBLayersWithMeasurement_[max_pfcand_]; 
+    float Cpfcan_stripTECLayersWithMeasurement_[max_pfcand_]; 
+    //Null
+    float Cpfcan_trackerLayersNull_[max_pfcand_];
+    float Cpfcan_pixelLayersNull_[max_pfcand_]; 
+    float Cpfcan_stripLayersNull_[max_pfcand_]; 
+    float Cpfcan_pixelBarrelLayersNull_[max_pfcand_];
+    float Cpfcan_pixelEndcapLayersNull_[max_pfcand_];
+    float Cpfcan_stripTIBLayersNull_[max_pfcand_];
+    float Cpfcan_stripTIDLayersNull_[max_pfcand_];
+    float Cpfcan_stripTOBLayersNull_[max_pfcand_];
+    float Cpfcan_stripTECLayersNull_[max_pfcand_];
 
     //Neutral Pf candidates
     unsigned int n_Npfcand_;
