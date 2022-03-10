@@ -120,6 +120,7 @@ private:
     //Pixel Endcap 
     float Cpfcan_nhitpixelEndcapLayer1_[max_pfcand_];
     float Cpfcan_nhitpixelEndcapLayer2_[max_pfcand_];
+    float Cpfcan_nhitpixelEndcapLayer3_[max_pfcand_];
     //Strip TIB
     float Cpfcan_nhitstripTIBLayer1_[max_pfcand_];
     float Cpfcan_nhitstripTIBLayer2_[max_pfcand_];
